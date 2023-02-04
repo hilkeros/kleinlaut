@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kleinLaut 2023</title>
+</head>
+<body>
+    <div class="orange-background"></div>
+    <div class="content">
+        <div class="logo"><img src="logo.png" alt="kleinLaut Festival, 28.-29.7.2023"></div>
+        <div class="archive">Archiv: 
+            <a href="/2022">2022</a> 
+            <a href="/2021">2021</a> 
+            <a href="/2019">2019</a> 
+            <a href="/2018">2018</a> 
+            <a href="/2017">2017</a> 
+            <a href="/2016">2016</a> 
+        </div>
+    </div>
+   
+</body>
+</html>
+
+<style>
+.content {
+    z-index: 10;
+    position: relative;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 90vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    padding-top: 5vh;
+}
+
+body {
+    /* background-color: #69a7d8; */
+    font-family: Roboto,sans-serif;
+}
+
+.orange-background {
+    /* background-color: #c95226; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+}
+
+.archive {
+    margin-top: 40px;
+    font-size: 0.7em;
+}
+
+.archive a {
+    color: black;
+}
+</style>
