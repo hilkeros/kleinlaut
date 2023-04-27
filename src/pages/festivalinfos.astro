@@ -1,0 +1,74 @@
+---
+import FestivalInfosText from "../components/FestivalInfosText.astro";
+import NavFooter from "../components/NavFooter.astro";
+import FestivalInfosImage from "../images/Elemente_SubPages_Festivalinfos.png";
+---
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kleinLaut 2023 - Festivalinfos</title>
+  </head>
+  <body>
+    <NavFooter />
+    <div class="header">
+      <div class="image-wrapper">
+        <img src={FestivalInfosImage} />
+        <span class="page-title">Festival-<br />infos</span>
+      </div>
+    </div>
+    <div class="content"><FestivalInfosText /></div>
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "PicNic-Regular";
+    src: url("/fonts/PicNic-Regular.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Authentic";
+    src: url("/fonts/AUTHENTICSans-60.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  body {
+    margin: 0;
+  }
+
+  .header {
+    width: 100vw;
+    position: relative;
+  }
+
+  .image-wrapper {
+    position: fixed;
+    top: 0;
+  }
+
+  .image-wrapper img {
+    width: 50%;
+  }
+
+  .image-wrapper .page-title {
+    position: absolute;
+    left: 4px;
+    top: 0;
+    font-family: "PicNic-Regular";
+    font-size: 6em;
+  }
+
+  .content {
+    margin-left: 50vw;
+    margin-top: 300px;
+    margin-right: 100px;
+    font-family: "Authentic";
+  }
+</style>
