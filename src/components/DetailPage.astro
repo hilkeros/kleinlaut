@@ -1,0 +1,63 @@
+---
+import NavFooter from "../components/NavFooter.astro";
+const { image, pageTitle } = Astro.props;
+---
+
+<NavFooter />
+<div class="header">
+  <div class="image-wrapper">
+    <img src={image} />
+    <span class="page-title">{pageTitle}</span>
+  </div>
+</div>
+<div class="content"><slot /></div>
+
+<style>
+  @font-face {
+    font-family: "PicNic-Regular";
+    src: url("/fonts/PicNic-Regular.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Authentic";
+    src: url("/fonts/AUTHENTICSans-60.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  body {
+    margin: 0;
+  }
+
+  .header {
+    width: 100vw;
+    position: relative;
+  }
+
+  .image-wrapper {
+    position: fixed;
+    top: 0;
+  }
+
+  .image-wrapper img {
+    width: 50%;
+  }
+
+  .image-wrapper .page-title {
+    position: absolute;
+    left: 4px;
+    top: 0;
+    font-family: "PicNic-Regular";
+    font-size: 6em;
+  }
+
+  .content {
+    margin-left: 50vw;
+    margin-top: 300px;
+    margin-right: 100px;
+    margin-bottom: 200px;
+    font-family: "Authentic";
+  }
+</style>
