@@ -9,19 +9,23 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
 ---
 
 <div class="content">
+  <div class="title">kleinLaut Festival 28. - 29.7.2023</div>
+  <div class="title-mobile">kleinLaut Festival<br />28. - 29.7.2023</div>
   <div class="box-up">
     <a class="nav-item" href="/lineup">
       <img src={lineUpImage} />
       <span class="nav-text">Lineup</span>
     </a>
-
-    <a class="nav-item" href="/rahmenprogramm">
+    <a class="nav-item rahmenprogramm" href="/rahmenprogramm">
       <img src={RPImage} />
       <span class="nav-text">Rahmenprogramm</span>
     </a>
   </div>
-  <div class="title">kleinLaut Festival 28. - 29.7.2023</div>
   <div class="box-down">
+    <a class="nav-item rahmenprogramm" href="/rahmenprogramm">
+      <img src={RPImage} />
+      <span class="nav-text">Rahmen-programm</span>
+    </a>
     <a class="nav-item" href="/festivalinfos">
       <img src={FestivalInfosImage} />
       <span class="nav-text">Festivalinfos</span>
@@ -41,9 +45,13 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
         <img src={AwarenessImage} />
         <span class="nav-text">Awareness</span>
       </a>
-      <a class="nav-item" href="/barrierefreiheit">
+      <a class="nav-item not-on-mobile" href="/barrierefreiheit">
         <img src={BarriereImage} />
         <span class="nav-text">Barrierefreiheit</span>
+      </a>
+      <a class="nav-item mobile" href="/barrierefreiheit">
+        <img src={BarriereImage} />
+        <span class="nav-text">Barriere-freiheit</span>
       </a>
     </div>
   </div>
@@ -53,7 +61,10 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
   .content {
     overflow-x: hidden;
   }
-  .title {
+  .title,
+  .title-mobile {
+    position: absolute;
+    top: calc((100vh - 100px) / 2);
     font-family: "PicNic-Regular";
     font-size: 4em;
     text-align: center;
@@ -65,6 +76,9 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
     animation-iteration-count: infinite;
   }
 
+  .title {
+  }
+
   @keyframes rightToLeft {
     0% {
       transform: translateX(100vw);
@@ -72,6 +86,10 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
     100% {
       transform: translateX(-100vw);
     }
+  }
+
+  .title-mobile {
+    display: none;
   }
 
   .box-up,
@@ -88,6 +106,13 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
   .box-down {
     grid-template-columns: 1fr 1fr 1fr;
     border-top: 2px solid black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .box-down .rahmenprogramm {
+    display: none;
   }
 
   .double-box {
@@ -101,6 +126,10 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
     color: black;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
+  }
+
+  .box-up .nav-item {
+    max-height: calc((100vh - 104px) / 2);
   }
 
   .nav-item:hover {
@@ -133,5 +162,56 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
     top: 0;
     font-family: "PicNic-Regular";
     font-size: 2.5em;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    .mobile {
+      display: block;
+    }
+
+    .not-on-mobile {
+      display: none;
+    }
+    .box-up .rahmenprogramm {
+      display: none;
+    }
+
+    .box-up {
+      grid-template-columns: 1fr;
+      height: calc(100vh / 4);
+    }
+
+    .title {
+      display: none;
+    }
+    .title-mobile {
+      display: block;
+      height: calc(100vh / 4);
+      top: calc(100vh / 4);
+      font-size: 2em;
+      padding-top: 30px;
+    }
+
+    .box-down {
+      height: calc(100vh / 2);
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .box-down .rahmenprogramm {
+      display: block;
+    }
+
+    .box-up .nav-item img {
+      max-height: calc(100vh / 4);
+    }
+
+    .nav-text {
+      overflow-wrap: break-word;
+      font-size: 2em;
+    }
   }
 </style>

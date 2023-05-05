@@ -60,4 +60,18 @@ const { image, pageTitle } = Astro.props;
     margin-bottom: 200px;
     font-family: "Authentic";
   }
+
+  @media screen and (max-width: 767px) {
+    .content {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+    }
+    .image-wrapper .page-title {
+      font-size: 3em;
+    }
+  }
 </style>

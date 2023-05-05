@@ -12,7 +12,7 @@
     height: 140px;
     font-size: 3em;
     background-color: white;
-    width: 100%;
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
@@ -40,5 +40,20 @@
 
   .footer .one-line {
     padding-top: 30px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer {
+      font-size: 1em;
+      height: 60px;
+    }
+
+    .footer a {
+      padding: 0;
+    }
+
+    .footer .one-line {
+      padding: 0;
+    }
   }
 </style>
