@@ -1,6 +1,15 @@
 ---
 import DetailPage from "../components/DetailPage.astro";
 import LineUpImage from "../images/Elemente_Subpages_Lineup.png";
+import ProgrammItem from "../components/ProgrammItem.svelte";
+import bandsFriday from "../data/bandsFriday";
+import bandsSaturday from "../data/bandsSaturday";
+
+const item = {
+  startTime: "18:00",
+  name: "Malummi",
+  videoUrl: "https://www.youtube.com/embed/RmxRS9aDwzE",
+};
 ---
 
 <!DOCTYPE html>
@@ -12,6 +21,11 @@ import LineUpImage from "../images/Elemente_Subpages_Lineup.png";
     <title>kleinLaut 2023 - Über uns</title>
   </head>
   <body>
-    <DetailPage image={LineUpImage} pageTitle="Lineup">Super bands</DetailPage>
+    <DetailPage image={LineUpImage} pageTitle="Lineup">
+      <h2 class="date">FREITAG 28.JULI</h2>
+      {bandsFriday.map((item) => <ProgrammItem client:load item={item} />)}
+      <h2 class="date">SAMSTAG 29.JULI</h2>
+      {bandsSaturday.map((item) => <ProgrammItem client:load item={item} />)}
+    </DetailPage>
   </body>
 </html>
