@@ -17,17 +17,22 @@
   </button>
 
   {#if detailOpen}
-    <div class="video">
-      <iframe
-        width="560"
-        height="315"
-        src={item.videoUrl}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      />
-    </div>
+    {#if item.description}
+      <div class="description">{item.description}</div>
+    {/if}
+    {#if item.videoUrl}
+      <div class="video">
+        <iframe
+          width="560"
+          height="315"
+          src={item.videoUrl}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        />
+      </div>
+    {/if}
   {/if}
 </div>
 
@@ -54,7 +59,21 @@
   .artist-name {
     margin-left: 12px;
   }
+
+  .description {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
   .video {
     margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    iframe {
+      max-width: 100% !important;
+      width: auto !important;
+      height: auto !important;
+    }
   }
 </style>
