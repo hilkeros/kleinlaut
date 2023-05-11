@@ -63,7 +63,10 @@ import Sponsors from "../components/Sponsors.astro";
 <style>
   .content {
     overflow-x: hidden;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
   }
   .title,
   .title-mobile {
