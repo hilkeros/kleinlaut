@@ -6,6 +6,8 @@ import AboutImage from "../images/Elemente_Mainpage_Ueberuns.png";
 import HelfenImage from "../images/Elemente_Mainpage_helfen.png";
 import AwarenessImage from "../images/Elemente_Mainpage_Awareness.png";
 import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
+
+import Sponsors from "../components/Sponsors.astro";
 ---
 
 <div class="content">
@@ -56,10 +58,12 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
     </div>
   </div>
 </div>
+<Sponsors />
 
 <style>
   .content {
     overflow-x: hidden;
+    height: 100vh;
   }
   .title,
   .title-mobile {
