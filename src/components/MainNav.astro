@@ -63,10 +63,8 @@ import Sponsors from "../components/Sponsors.astro";
 <style>
   .content {
     overflow-x: hidden;
-    min-height: 100vh;
-    min-height: -moz-available;
-    min-height: -webkit-fill-available;
-    min-height: fill-available;
+    height: 100vh;
+    height: var(--doc-height);
   }
   .title,
   .title-mobile {
@@ -189,7 +187,7 @@ import Sponsors from "../components/Sponsors.astro";
 
     .box-up {
       grid-template-columns: 1fr;
-      height: calc(100vh / 4);
+      height: calc(var(--doc-height) / 4);
     }
 
     .title {
@@ -197,15 +195,15 @@ import Sponsors from "../components/Sponsors.astro";
     }
     .title-mobile {
       display: block;
-      height: calc(100vh / 4);
-      top: calc(100vh / 4);
+      height: calc(var(--doc-height) / 4);
+      top: calc(var(--doc-height) / 4);
       font-size: 2em;
       padding-top: 30px;
       animation: none; duration timing-function delay iteration-count direction fill-mode;
     }
 
     .box-down {
-      height: calc(100vh / 2);
+      height: calc(var(--doc-height) / 2);
       grid-template-columns: 1fr 1fr;
     }
 
@@ -214,7 +212,7 @@ import Sponsors from "../components/Sponsors.astro";
     }
 
     .box-up .nav-item img {
-      max-height: calc(100vh / 4);
+      max-height: calc(var(--doc-height) / 4);
     }
 
     .nav-text {
