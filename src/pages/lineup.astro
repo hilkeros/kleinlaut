@@ -1,7 +1,7 @@
 ---
 import DetailPage from "../components/DetailPage.astro";
 import LineUpImage from "../images/Elemente_Subpages_Lineup.png";
-import ProgrammItem from "../components/ProgrammItem.svelte";
+import ProgrammList from "../components/ProgrammList.svelte";
 import bandsFriday from "../data/bandsFriday";
 import bandsSaturday from "../data/bandsSaturday";
 ---
@@ -16,10 +16,11 @@ import bandsSaturday from "../data/bandsSaturday";
   </head>
   <body>
     <DetailPage image={LineUpImage} pageTitle="Lineup">
-      <h2 class="date">FREITAG 28.JULI</h2>
-      {bandsFriday.map((item) => <ProgrammItem client:load item={item} />)}
-      <h2 class="date">SAMSTAG 29.JULI</h2>
-      {bandsSaturday.map((item) => <ProgrammItem client:load item={item} />)}
+      <ProgrammList
+        client:load
+        bandsFriday={bandsFriday}
+        bandsSaturday={bandsSaturday}
+      />
     </DetailPage>
   </body>
 </html>

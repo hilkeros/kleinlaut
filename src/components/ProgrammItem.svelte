@@ -1,22 +1,25 @@
 <script>
   export let item;
-
-  let detailOpen = false;
+  export let selected;
 
   function toggle() {
-    detailOpen = !detailOpen;
+    if (selected === item.name) {
+      selected = "";
+    } else {
+      selected = item.name;
+    }
   }
 </script>
 
 <div>
-  <button on:click={toggle} class={detailOpen ? "selected" : ""}>
+  <button on:click={toggle} class={selected === item.name ? "selected" : ""}>
     <div>
       <span>{item.startTime}</span>
       <span class="artist-name">{item.name}</span>
     </div>
   </button>
 
-  {#if detailOpen}
+  {#if selected === item.name}
     {#if item.description}
       <div class="description">{item.description}</div>
     {/if}
