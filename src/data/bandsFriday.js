@@ -19,7 +19,7 @@ export default [
     {
         startTime: "23:00",
         name: "ASBEST",
-        videoUrl: "https://www.youtube.com/embed/Ra5N2gLu1d4",
+        videoUrl: "",
         description: "Noch nie wurden kalter post punk, leidenschaftlicher noiserock und hypnotischer shoegaze so selbstverständlich ineinander verwoben. Mit schreienden Vocals, verzerrten Gitarren und treibenden Rhythmen stellt ASBEST unsere pathologische Lebensrealität in Frage. Am kleinLaut heisst das: Hässige Musik, die zum Tanzen einlädt!"
     },
     {

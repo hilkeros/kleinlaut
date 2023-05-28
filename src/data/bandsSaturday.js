@@ -19,7 +19,7 @@ export default [
     {
         startTime: "21:30",
         name: "Brigade Brut",
-        videoUrl: "https://www.youtube.com/embed/FPSvzZ1j1G0",
+        videoUrl: "",
         description: "Kultur ist Kampf! Mit Brigade Brut wird Kultur zum Handgemenge. Im Ring klärt Brigade Brut die grossen und kleinen Fragen unserer Zeit: Ananas auf der Pizza? Cocktail oder Joghurt? Hot or not? Manchmal spitz, aber meistens stumpf hat Brigade Brut auf alles eine Antwort."
     },
     {
