@@ -29,13 +29,13 @@ export default [
         description: "Seit fünfzehn Jahren versetzt Palko!Muski mit ihrer Mischung aus Polka, Gypsypunk und Punk Musikliebhaber*innen an Konzerten in Ekstase. Ausgelassener Tanz ist am kleinLaut garantiert!"
     },
     {
-        startTime: "0:30",
+        startTime: "00:30",
         name: "Sun State Of Mind",
         videoUrl: "https://www.youtube.com/embed/kVeIXe_S52Y",
         description: "Das Busking-Duo aus Wien zeigt mit Loop-Stations und diversen Instrumenten einen vielseitigen Sound, der Genres, sowie Menschen verbindet. Mit Ihrem Psychedelic Pop Soul bringt diese Band das Festivalfeeling auf den Punkt!"
     },
     {
-        startTime: "2:00",
+        startTime: "02:00",
         name: "DASHA",
         description: "Mit einer Bandbreite an Genres von klassischem House, Eurodance und Trance bis zu melodischem Techno und elektrisierenden Pop-Krachern weckt DASHA nostalgische Erinnerungen und bringt am kleinLaut jede Hüfte zum Schwingen."
     },
