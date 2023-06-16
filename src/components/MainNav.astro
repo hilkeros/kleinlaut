@@ -1,7 +1,8 @@
 ---
 import lineUpImage from "../images/Elemente_Mainpage_Lineup.png";
 import RPImage from "../images/Elemente_Mainpage_Rahmenprogramm.png";
-import FestivalInfosImage from "../images/Elemente_Mainpage_Festivalinfos.png";
+import FestivalInfosImage from "../images/Elemente_Mainpage_Festivalinfos_Small.png";
+import TicketsImage from "../images/Elemente_Mainpage_Tickets.png";
 import AboutImage from "../images/Elemente_Mainpage_Ueberuns.png";
 import HelfenImage from "../images/Elemente_Mainpage_helfen.png";
 import AwarenessImage from "../images/Elemente_Mainpage_Awareness.png";
@@ -28,10 +29,16 @@ import Sponsors from "../components/Sponsors.astro";
       <img src={RPImage} />
       <span class="nav-text">Rahmen-programm</span>
     </a>
-    <a class="nav-item" href="/festivalinfos">
-      <img src={FestivalInfosImage} />
-      <span class="nav-text">Festivalinfos</span>
-    </a>
+    <div class="double-box">
+      <a class="nav-item" href="/festivalinfos">
+        <img src={FestivalInfosImage} />
+        <span class="nav-text">Festivalinfos</span>
+      </a>
+      <a class="nav-item" href="https://www.petzi.ch/de/events/52618-kleinlaut-festival-kleinlaut-festival-2023/tickets/" target="_blank">
+        <img src={TicketsImage} />
+        <span class="nav-text">Tickets</span>
+      </a>
+    </div>
     <div class="double-box">
       <a class="nav-item" href="/ueberuns">
         <img src={AboutImage} />
