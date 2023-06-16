@@ -1,7 +1,69 @@
-<div class="sponsors"></div>
+---
+import Kuratorium from "../images/sponsors/AGKuratorium.png";
+import CKWeine from "../images/sponsors/CKWeine.png";
+import EleRiniken from "../images/sponsors/EleRiniken.png";
+import Gutschlafen from "../images/sponsors/gutschlafen.png";
+import KanalK from "../images/sponsors/KanalK.png";
+import Laeuchli from "../images/sponsors/Laeuchli.png";
+import Mobi from "../images/sponsors/Mobi.png";
+import Paarberatung from "../images/sponsors/Paarberatung.png";
+import Raiffeisen from "../images/sponsors/raiffeisen-aare-reuss.png";
+import Schaepper from "../images/sponsors/Schaepper.png";
+import Tonstrom from "../images/sponsors/Tonstrom.png";
+import IBB from "../images/sponsors/IBB.png";
+---
+
+<div class="sponsors">
+  <img src={Kuratorium} class="main-sponsor" />
+  <div class="sponsor-row">
+    <img src={KanalK} class="sponsor" />
+    <img src={CKWeine} class="sponsor" />
+    <img src={EleRiniken} class="sponsor" />
+    <img src={Gutschlafen} class="sponsor" />
+  </div>
+  <div class="sponsor-row">
+    <img src={Laeuchli} class="sponsor" />
+    <img src={Mobi} class="sponsor" />
+    <img src={Paarberatung} class="sponsor" />
+    <img src={Raiffeisen} class="sponsor" />
+  </div>
+  <div class="sponsor-row">
+    <img src={Schaepper} class="sponsor" />
+    <img src={Tonstrom} class="sponsor" />
+    <img src={IBB} class="sponsor" />
+  </div>
+</div>
 
 <style>
   .sponsors {
+    margin-top: 40px;
     height: 300px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-sponsor {
+    width: 300px;
+    max-width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .sponsor-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 50px;
+  }
+  .sponsor {
+    width: 150px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .sponsor {
+      width: 80%;
+    }
   }
 </style>
