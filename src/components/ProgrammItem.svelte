@@ -36,6 +36,9 @@
         />
       </div>
     {/if}
+    {#if item.imgUrl}
+      <div class="image"><img src={item.imgUrl} alt={item.name} /></div>
+    {/if}
   {/if}
 </div>
 
@@ -72,11 +75,24 @@
     margin-bottom: 20px;
   }
 
+  .image {
+    text-align: center;
+  }
+  .image img {
+    width: 360px;
+    margin: 20px;
+  }
+
   @media screen and (max-width: 767px) {
     iframe {
       max-width: 100% !important;
       width: auto !important;
       height: auto !important;
+    }
+
+    .image img {
+      width: 80%;
+      margin: 20px;
     }
   }
 </style>
