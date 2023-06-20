@@ -2,7 +2,7 @@ export default [
     {
         startTime: "18:00",
         name: "fc.kleinstadt",
-        imgUrl: "2023/lineup/fc.kleinstadt.png",
+        imgUrl: "/2023/lineup/fc.kleinstadt.png",
         description: "Mit einem feinen Gespür für wilde Melancholie und tiefgreifender Abwechslung, spielt FC Kleinstadt Gitarrenmusik direkt aus dem Herzen. Wir freuen uns, die vier wahlbadener am kleinLaut zu haben!"
     },
     {
