@@ -11,15 +11,15 @@ export default [
         description: "Hilkes Musik trifft Gefühle, die die Meisten nicht einmal beschreiben können, so treffend auf den Punkt, dass es schmerzt. Die Songs sind manchmal tanzbar, oft langsam, sowohl verstörend als auch beruhigend, zerbrechlich, aber selbstbewusst, als würde man auf dem Eis eines implodierenden Gletschers tanzen."
     },
     {
-        startTime: "20:00",
-        name: "KARA DELIK",
+        startTime: "19:45",
+        name: "Kara Delik",
         videoUrl: "https://www.youtube.com/embed/2DivpXonISU",
         description: "Kara Delik vereint verschiedene musikalische Einflüsse zu einem einzigartigen Sound, der von türkischer Folklore über Krautrock bis hin zu Punk reicht. Mit ihren vielseitigen Stimmen, treibenden Rhythmen und dreckigen Basslines schaffen sie eine spannende Mischung aus Tradition und Moderne, die mehr ist als die Summe ihrer Teile."
     },
     {
         startTime: "21:30",
         name: "Brigade Brut",
-        videoUrl: "",
+        imgUrl: "/2023/lineup/BrigadeBrut.png",
         description: "Kultur ist Kampf! Mit Brigade Brut wird Kultur zum Handgemenge. Im Ring klärt Brigade Brut die grossen und kleinen Fragen unserer Zeit: Ananas auf der Pizza? Cocktail oder Joghurt? Hot or not? Manchmal spitz, aber meistens stumpf hat Brigade Brut auf alles eine Antwort."
     },
     {
@@ -37,6 +37,7 @@ export default [
     {
         startTime: "02:00",
         name: "DASHA",
+        imgUrl: "/2023/lineup/Dasha.png",
         description: "Mit einer Bandbreite an Genres von klassischem House, Eurodance und Trance bis zu melodischem Techno und elektrisierenden Pop-Krachern weckt DASHA nostalgische Erinnerungen und bringt am kleinLaut jede Hüfte zum Schwingen."
     },
 ]

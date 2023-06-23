@@ -14,7 +14,9 @@
 <div>
   <button on:click={toggle} class={selected === item.name ? "selected" : ""}>
     <div>
-      <span>{item.startTime}</span>
+      {#if item.startTime}
+        <span>{item.startTime}</span>
+      {/if}
       <span class="artist-name">{item.name}</span>
     </div>
   </button>

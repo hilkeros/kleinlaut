@@ -20,7 +20,7 @@ export default [
     {
         startTime: "23:00",
         name: "ASBEST",
-        videoUrl: "",
+        imgUrl: "/2023/lineup/ASBEST.png",
         description: "Noch nie wurden kalter post punk, leidenschaftlicher noiserock und hypnotischer shoegaze so selbstverständlich ineinander verwoben. Mit schreienden Vocals, verzerrten Gitarren und treibenden Rhythmen stellt ASBEST unsere pathologische Lebensrealität in Frage. Am kleinLaut heisst das: Hässige Musik, die zum Tanzen einlädt!"
     },
     {
@@ -32,6 +32,7 @@ export default [
     {
         startTime: "01:45",
         name: "Pussy Bleach DJ All Stars",
+        imgUrl: "/2023/lineup/PussyBleach.png",
         description: "Das Pussybleach DJ-All Stars Kollektiv verlässt ihre Fumetto-Comfort-Zone und zügelt ihren Disco-Dreier an ein Open-Air! Mit fetzigen Vibes, passendem Kostüm und verschwitzten Körpern, lassen sie die Tanz-Herzen höher schlagen, Beine schneller strampeln, die Hüften noch weiter schwingen und Köpfe im Beat-Love-Battle explodieren."
     },
 ];

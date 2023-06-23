@@ -1,6 +1,10 @@
 ---
 import DetailPage from "../components/DetailPage.astro";
+import ProgrammList from "../components/ProgrammList.svelte";
+import OffChaos from "../components/OffChaos.svelte";
 import RahmenProgrammImage from "../images/Elemente_Subpages_Rahmenprogramm.png";
+import offFriday from "../data/offFriday";
+import offSaturday from "../data/offSaturday";
 ---
 
 <!DOCTYPE html>
@@ -13,9 +17,17 @@ import RahmenProgrammImage from "../images/Elemente_Subpages_Rahmenprogramm.png"
   </head>
   <body>
     <DetailPage image={RahmenProgrammImage} pageTitle="Rahmenprogramm">
-      Bei uns gibt es nicht nur gute Musik, es passiert auch viel neben der
-      Bühne! Bist du gespannt, was kommt? Was wir für dieses Jahr aushecken,
-      erfährst du im Juni.
+      <p>
+        Dieses Jahr wird auch neben der Bühne wieder ganz viel laufen! Ob zum
+        zuschauen, ausprobieren oder selbst mitmachen: unser Rahmenprogramm hat
+        für alle was dabei.
+      </p>
+      <ProgrammList
+        client:load
+        bandsFriday={offFriday}
+        bandsSaturday={offSaturday}
+      />
+      <OffChaos client:load />
     </DetailPage>
   </body>
 </html>
