@@ -1,10 +1,5 @@
 export default [
     {
-        startTime: "15:00",
-        name: "Larry Bang Bang",
-        videoUrl: "https://www.youtube.com/embed/FPSvzZ1j1G0"
-    },
-    {
         startTime: "18:00",
         name: "Hilke",
         videoUrl: "https://www.youtube.com/embed/2scGV2YcGNU",
