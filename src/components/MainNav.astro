@@ -8,12 +8,44 @@ import HelfenImage from "../images/Elemente_Mainpage_helfen.png";
 import AwarenessImage from "../images/Elemente_Mainpage_Awareness.png";
 import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
 
+import pauseIcon from "../images/icons/pause_icon.svg";
+import playIcon from "../images/icons/play_icon.svg";
+
 import Sponsors from "../components/Sponsors.astro";
 ---
 
+<script>
+  const pauseButton = document.getElementById("pause-animation");
+  const playButton = document.getElementById("start-animation");
+  const title = document.getElementById("title");
+
+  function pauseAnimation() {
+    pauseButton.style.display = "none";
+    playButton.style.display = "block";
+    title.classList.add("no-animation");
+    playButton.addEventListener("click", startAnimation);
+  }
+
+  function startAnimation() {
+    playButton.style.display = "none";
+    pauseButton.style.display = "block";
+    title.classList.remove("no-animation");
+  }
+
+  pauseButton.addEventListener("click", pauseAnimation);
+</script>
+
 <div class="content">
-  <div class="title">kleinLaut Festival 28. - 29.7.2023</div>
-  <div class="title-mobile">kleinLaut Festival<br/> 28. - 29.7.2023</div>
+  <div class="title" id="title">kleinLaut Festival 28. - 29.7.2023</div>
+  <div class="title-mobile">kleinLaut Festival<br /> 28. - 29.7.2023</div>
+  <div class="animation-controls not-on-mobile">
+    <button id="start-animation"
+      ><img src={playIcon} alt="Animation starten" /></button
+    >
+    <button id="pause-animation"
+      ><img src={pauseIcon} alt="Animation stoppen" /></button
+    >
+  </div>
   <div class="box-up">
     <a class="nav-item" href="/lineup">
       <img src={lineUpImage} />
@@ -34,7 +66,11 @@ import Sponsors from "../components/Sponsors.astro";
         <img src={FestivalInfosImage} />
         <span class="nav-text">Festivalinfos</span>
       </a>
-      <a class="nav-item" href="https://www.petzi.ch/de/events/52618-kleinlaut-festival-kleinlaut-festival-2023/" target="_blank">
+      <a
+        class="nav-item"
+        href="https://www.petzi.ch/de/events/52618-kleinlaut-festival-kleinlaut-festival-2023/"
+        target="_blank"
+      >
         <img src={TicketsImage} />
         <span class="nav-text">Tickets</span>
       </a>
@@ -87,10 +123,6 @@ import Sponsors from "../components/Sponsors.astro";
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
-
-  .title {
-  }
-
   @keyframes rightToLeft {
     0% {
       transform: translateX(100vw);
@@ -100,7 +132,37 @@ import Sponsors from "../components/Sponsors.astro";
     }
   }
 
+  .no-animation {
+    animation: none;
+  }
+
   .title-mobile {
+    display: none;
+  }
+
+  .animation-controls {
+    position: absolute;
+    top: calc((100vh - 180px) / 2);
+    left: 10px;
+    z-index: 10;
+  }
+
+  .animation-controls button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .animation-controls button:hover {
+    border: 2px solid black;
+  }
+  .animation-controls img {
+    width: 30px;
+  }
+
+  #start-animation {
     display: none;
   }
 
@@ -206,7 +268,7 @@ import Sponsors from "../components/Sponsors.astro";
       top: calc(var(--doc-height) / 4);
       font-size: 2em;
       padding-top: 30px;
-      animation: none; duration timing-function delay iteration-count direction fill-mode;
+      animation: none;
     }
 
     .box-down {
@@ -219,7 +281,7 @@ import Sponsors from "../components/Sponsors.astro";
     }
 
     .box-up .nav-item img {
-      max-height: calc( / 4);
+      max-height: calc(/4);
     }
 
     .nav-text {
