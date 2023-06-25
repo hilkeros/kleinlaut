@@ -10,6 +10,9 @@ import BarriereImage from "../images/Elemente_Mainpage_Barrierefreiheit.png";
 
 import pauseIcon from "../images/icons/pause_icon.svg";
 import playIcon from "../images/icons/play_icon.svg";
+import instagramIcon from "../images/icons/instagram.svg";
+import facebookIcon from "../images/icons/facebook.svg";
+import spotifyIcon from "../images/icons/spotify.svg";
 
 import Sponsors from "../components/Sponsors.astro";
 ---
@@ -44,6 +47,18 @@ import Sponsors from "../components/Sponsors.astro";
     >
     <button id="pause-animation"
       ><img src={pauseIcon} alt="Animation stoppen" /></button
+    >
+  </div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/kleinlaut_festival/" target="_blank"
+      ><img src={instagramIcon} /></a
+    >
+    <a href="https://www.facebook.com/kleinlaut.festival" target="_blank"
+      ><img src={facebookIcon} /></a
+    >
+    <a
+      href="https://open.spotify.com/playlist/6duiW6uc9erLhy9j5OnZAI?si=9dd75edcb92d4691"
+      target="_blank"><img src={spotifyIcon} /></a
     >
   </div>
   <div class="box-up">
@@ -156,7 +171,7 @@ import Sponsors from "../components/Sponsors.astro";
   }
 
   .animation-controls button:hover {
-    border: 2px solid black;
+    outline: 2px solid black;
   }
   .animation-controls img {
     width: 30px;
@@ -164,6 +179,21 @@ import Sponsors from "../components/Sponsors.astro";
 
   #start-animation {
     display: none;
+  }
+
+  .social-icons {
+    position: absolute;
+    top: calc((100vh - 180px) / 2);
+    right: 20px;
+    z-index: 10;
+  }
+
+  .social-icons img {
+    width: 30px;
+  }
+
+  .social-icons img:hover {
+    outline: 2px solid black;
   }
 
   .box-up,
@@ -249,6 +279,10 @@ import Sponsors from "../components/Sponsors.astro";
 
     .not-on-mobile {
       display: none;
+    }
+
+    .social-icons {
+      top: calc(100vh + 40px);
     }
     .box-up .rahmenprogramm {
       display: none;
