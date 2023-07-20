@@ -6,7 +6,7 @@ export default [
         description: "Hilkes Musik trifft Gefühle, die die Meisten nicht einmal beschreiben können, so treffend auf den Punkt, dass es schmerzt. Die Songs sind manchmal tanzbar, oft langsam, sowohl verstörend als auch beruhigend, zerbrechlich, aber selbstbewusst, als würde man auf dem Eis eines implodierenden Gletschers tanzen."
     },
     {
-        startTime: "19:45",
+        startTime: "20:00",
         name: "Kara Delik",
         videoUrl: "https://www.youtube.com/embed/2DivpXonISU",
         description: "Kara Delik vereint verschiedene musikalische Einflüsse zu einem einzigartigen Sound, der von türkischer Folklore über Krautrock bis hin zu Punk reicht. Mit ihren vielseitigen Stimmen, treibenden Rhythmen und dreckigen Basslines schaffen sie eine spannende Mischung aus Tradition und Moderne, die mehr ist als die Summe ihrer Teile."
