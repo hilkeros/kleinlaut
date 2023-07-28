@@ -36,7 +36,7 @@ export default [
         description: "Das Busking-Duo aus Wien zeigt mit Loop-Stations und diversen Instrumenten einen vielseitigen Sound, der Genres, sowie Menschen verbindet. Mit Ihrem Psychedelic Pop Soul bringt diese Band das Festivalfeeling auf den Punkt!"
     },
     {
-        startTime: "1:45",
+        startTime: "01:45",
         name: "DASHA",
         imgUrl: "/2023/lineup/Dasha.png",
         description: "Mit einer Bandbreite an Genres von klassischem House, Eurodance und Trance bis zu melodischem Techno und elektrisierenden Pop-Krachern weckt DASHA nostalgische Erinnerungen und bringt am kleinLaut jede Hüfte zum Schwingen."

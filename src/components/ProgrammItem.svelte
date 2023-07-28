@@ -13,11 +13,11 @@
 
 <div>
   <button on:click={toggle} class={selected === item.name ? "selected" : ""}>
-    <div>
+    <div class="time">
       {#if item.startTime}
-        <span>{item.startTime}</span>
+        <div class="start-time">{item.startTime}</div>
       {/if}
-      <span class="artist-name">{item.name}</span>
+      <div class="artist-name">{item.name}</div>
     </div>
   </button>
 
@@ -64,8 +64,17 @@
     color: white;
   }
 
+  .time {
+    display: flex;
+  }
+
+  .start-time {
+    width: 60px;
+  }
+
   .artist-name {
     margin-left: 12px;
+    white-space: nowrap;
   }
 
   .description {
